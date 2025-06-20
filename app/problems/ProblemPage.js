@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { database } from "../database/db";
@@ -15,7 +16,17 @@ export default function ProblemsPage() {
   return (
     <div className="flex flex-wrap  gap-20 mt-[160px]  justify-center">
       <div className="flex flex-wrap justify-center items-center w-[1400px] gap-20  ">
+
+
       {deviceData.problems.map((problem, index) => (
+        <Link
+  href={{
+    pathname: "/steps",
+    query: { device: deviceData.pcType, problem: problem.problem },
+  }}
+  key={index}
+>
+
         <div key={index}
         className="flex flex-col w-[300px] h-[250px] items-center justify-center rounded-lg shadow-md border-1 border-[#171717] gap-5 ">
           
@@ -26,7 +37,7 @@ export default function ProblemsPage() {
           height={1080}
           className="w-auto h-[152px]"/>
           <h2 >{problem.problem}</h2>
-        </div>
+        </div></Link>
       ))}</div>
     </div>
   );

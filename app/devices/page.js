@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { database } from "../database/db";
+
 
 export default function DevicesPage() {
   return (
