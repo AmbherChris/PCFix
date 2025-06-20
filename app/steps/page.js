@@ -1,10 +1,10 @@
-'use client';
-export const dynamic = 'force-dynamic';
+"use client";
+
 
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { database } from '../database/db';
-
+export const dynamic = 'force-dynamic';
 export default function StepPage() {
   const searchParams = useSearchParams();
   const device = searchParams.get('device');
