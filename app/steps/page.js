@@ -1,6 +1,6 @@
-
-export const dynamic = 'force-dynamic';
 'use client';
+export const dynamic = 'force-dynamic';
+
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { database } from '../database/db';
