@@ -7,7 +7,7 @@ export default function NavBar(){
             </a>
             <a href="/devices">
             <li>Devices</li></a>
-            <a href="/problems">
+            <a href="/allProblems">
             <li>Problems</li></a>
             <a>
             <li>About</li></a>

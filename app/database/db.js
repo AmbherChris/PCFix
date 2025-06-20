@@ -1,9 +1,13 @@
+
+
+
 export const database = [
   {
     pcType: "Desktop",
     problems: [
       {
         problem: "Slow Boot",
+        image:"/slowBoot.png",
         problemDescription:
           "A slow boot is when your desktop PC takes an unusually long time to start up...",
         stepsInfo: {
@@ -22,6 +26,7 @@ export const database = [
       },
       {
         problem: "Lagging and Freezing Screen",
+        image:"/laggingAndFreezingScreen.png",
         problemDescription: "problem description",
         stepsInfo: {
           stepNumber: "1",
@@ -33,6 +38,43 @@ export const database = [
       },
       {
         problem: "Low Storage",
+        image:"/lowStorage.png",
+        problemDescription: "problem description",
+        stepsInfo: {
+          stepNumber: "1",
+          stepTitle: "test title",
+          why: "why test",
+          steps: ["steps test"],
+          takeaways: "takeaway test",
+        }
+      },
+      {
+        problem: "No Display",
+        image:"/noDisplay.png",
+        problemDescription: "problem description",
+        stepsInfo: {
+          stepNumber: "1",
+          stepTitle: "test title",
+          why: "why test",
+          steps: ["steps test"],
+          takeaways: "takeaway test",
+        }
+      },
+      {
+        problem: "No Internet Connection",
+        image:"/noInternetConnection.png",
+        problemDescription: "problem description",
+        stepsInfo: {
+          stepNumber: "1",
+          stepTitle: "test title",
+          why: "why test",
+          steps: ["steps test"],
+          takeaways: "takeaway test",
+        }
+      },
+      {
+        problem: "Blue Screen of Death",
+        image:"/BSOD.png",
         problemDescription: "problem description",
         stepsInfo: {
           stepNumber: "1",
@@ -46,8 +88,31 @@ export const database = [
   },
   {
     pcType: "Laptop",
-    problems: [{
-        problem:"test"}
+    problems: [
+      {
+        problem: "Blue Screen of Death",
+        image:"/BSOD.png",
+        problemDescription: "problem description",
+        stepsInfo: {
+          stepNumber: "1",
+          stepTitle: "test title",
+          why: "why test",
+          steps: ["steps test"],
+          takeaways: "takeaway test",
+        }
+      },
+      {
+        problem: "Blue Screen of Death",
+        image:"/BSOD.png",
+        problemDescription: "problem description",
+        stepsInfo: {
+          stepNumber: "1",
+          stepTitle: "test title",
+          why: "why test",
+          steps: ["steps test"],
+          takeaways: "takeaway test",
+        }
+      }
     ]
   }
 ];
