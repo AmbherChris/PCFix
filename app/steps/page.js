@@ -23,6 +23,7 @@ export default function StepPage() {
   const steps = problemData.stepsInfo;
 
   return (
+    <Suspense fallback={<p>Loading problems...</p>}>
     <div className="mt-32 max-w-4xl mx-auto px-6">
       <h1 className="text-3xl font-bold mb-6">{problemData.problem}</h1>
       <Image
@@ -49,6 +50,6 @@ export default function StepPage() {
           <strong>Takeaway:</strong> {steps.takeaways}
         </p>
       </div>
-    </div>
+    </div></Suspense>
   );
 }
