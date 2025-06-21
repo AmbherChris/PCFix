@@ -1,7 +1,7 @@
 export default function NavBar(){
     return(
         <>
-        <ul className="flex gap-8 border-[#171717] border-1 rounded-lg p-3 px-4 shadow-md">
+        <ul className="flex gap-8 border-[#171717] border-1 rounded-lg p-3 px-4 shadow-md bg-[white]">
             <a href="/">
             <li>Home</li>
             </a>
