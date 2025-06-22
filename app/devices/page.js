@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,17 +18,24 @@ export default function DevicesPage() {
           className="w-[250px]"/>
           <h2>Desktop</h2>
         </div></Link>
-        <Link href={{
-          pathname: "/problems",
-          query: { device: "Laptop" }
-        }}>
-        <div className="flex flex-col border-2 border-[#171717] w-[300px] h-[250px] items-center justify-center rounded-xl shadow-lg">
-          <Image src={"/laptop.png"} alt="image of desktop" 
-          width={512}
-          height={512}
-          className="w-[250px]"/>
-          <h2>Laptop</h2>
-        </div></Link>
+        <button onClick={() => alert("Not available")}>
+  <div className="relative flex flex-col border-2 border-[#171717] w-[300px] h-[250px] items-center justify-center rounded-xl shadow-lg">
+    
+    {/* Overlay */}
+    <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center rounded-lg z-10">
+      <span className="text-white text-xl font-bold">Not Available</span>
+    </div>
+
+    <Image
+      src={"/laptop.png"}
+      alt="image of laptop"
+      width={512}
+      height={512}
+      className="w-[250px] z-0"
+    />
+    <h2 className="z-0">Laptop</h2>
+  </div>
+</button>
       </div>
       
     </div>

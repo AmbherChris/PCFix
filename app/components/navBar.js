@@ -1,3 +1,6 @@
+"use client";
+
+
 export default function NavBar(){
     return(
         <>
@@ -9,9 +12,9 @@ export default function NavBar(){
             <li>Devices</li></a>
             <a href="/allProblems">
             <li>Problems</li></a>
-            <a>
+            <a onClick={() => alert("Not available")}>
             <li>About</li></a>
-            <a>
+            <a onClick={() => alert("Not available")}>
             <li>Contacts</li></a>
         </ul>
         
