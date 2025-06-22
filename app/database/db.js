@@ -463,14 +463,98 @@ export const database = [
       {
         problem: "Blue Screen of Death",
         image: "/BSOD.png",
-        problemDescription: "problem description",
-        stepsInfo: {
-          stepNumber: "1",
-          stepTitle: "test title",
-          why: "why test",
-          steps: ["steps test"],
-          takeaways: "takeaway test",
-        },
+        problemDescription: "A BSOD is a system crash error screen in Windows, usually caused by hardware issues, driver conflicts, or system corruption.",
+        stepsInfo: [
+          {
+            stepNumber: "1",
+            stepTitle: "Note the Error Code or Message",
+            why: "The stop code tells you what's causing the crash — drivers, memory, or Windows itself.",
+            steps: [
+              "When BSOD appears, write down the Stop Code and any filename shown.",
+              "Take a photo of the screen with your phone before the system restarts.",
+              "After reboot, open Reliability Monitor (Win → type reliability monitor) and check recent critical events.",
+              'Or open Event Viewer (Win → type event viewer) → Windows Logs → System → filter by “Error” or “Critical”'
+            ],
+            takeaways: "Stop codes disappear quickly — record them to guide your next steps.",
+          },
+          {
+            stepNumber: "2",
+            stepTitle: "Boot into Safe Mode",
+            why: "Safe Mode starts Windows with a minimal set of drivers and can help you troubleshoot issues.",
+            steps: [
+              "Restart your computer and press F8 (or Shift + F8) before Windows begins to load.",
+              'Select "Safe Mode" or "Safe Mode with Networking" from the Advanced Boot Options menu.',
+            ],
+            takeaways: "Safe Mode can allow you to perform troubleshooting steps that require access to the system.",
+          },
+
+          {
+            stepNumber: "3",
+            stepTitle: "Use System Restore",
+            why: "System Restore can revert your computer to a previous state before the issue occurred.",
+            steps: [
+              "",
+              "",
+              "",
+              ""
+            ],
+            takeaways: "4",
+          },
+
+          {
+            stepNumber: "5",
+            stepTitle: "",
+            why: "",
+            steps: [
+              "",
+              "",
+              "",
+              ""
+            ],
+            takeaways: "",
+          },
+
+          {
+            stepNumber: "6",
+            stepTitle: "",
+            why: "",
+            steps: [
+              "",
+              "",
+              "",
+              ""
+            ],
+            takeaways: "",
+          },
+
+          {
+            stepNumber: "7",
+            stepTitle: "",
+            why: "",
+            steps: [
+              "",
+              "",
+              "",
+              ""
+            ],
+            takeaways: "",
+          },
+           {
+            stepNumber: "8",
+            stepTitle: "",
+            why: "",
+            steps: [
+              "",
+              "",
+              "",
+              ""
+            ],
+            takeaways: "",
+          },
+
+
+
+        ]
       },
     ],
   },
@@ -481,25 +565,41 @@ export const database = [
         problem: "Blue Screen of Death",
         image: "/BSOD.png",
         problemDescription: "problem description",
-        stepsInfo: {
-          stepNumber: "1",
-          stepTitle: "test title",
-          why: "why test",
-          steps: ["steps test"],
-          takeaways: "takeaway test",
-        },
+        stepsInfo: [
+          {
+            stepNumber: "1",
+            stepTitle: "",
+            why: "",
+            steps: [
+              "",
+              "",
+              "",
+              ""
+            ],
+            takeaways: "",
+          },
+
+        ]
       },
       {
         problem: "Blue Screen of Death",
         image: "/BSOD.png",
         problemDescription: "problem description",
-        stepsInfo: {
-          stepNumber: "1",
-          stepTitle: "test title",
-          why: "why test",
-          steps: ["steps test"],
-          takeaways: "takeaway test",
-        },
+        stepsInfo: [
+          {
+            stepNumber: "1",
+            stepTitle: "",
+            why: "",
+            steps: [
+              "",
+              "",
+              "",
+              ""
+            ],
+            takeaways: "",
+          },
+
+        ]
       },
     ],
   },

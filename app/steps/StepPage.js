@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { database } from "../database/db";
+import { database } from "../database/newDb";
 
 export default function StepPage() {
   const searchParams = useSearchParams();
@@ -13,7 +13,11 @@ export default function StepPage() {
     (d) => d.pcType.toLowerCase() === device?.toLowerCase()
   );
 
-  const problemData = deviceData?.problems.find(
+  // Flatten all problems from all categories
+  const allProblems =
+    deviceData?.problems.flatMap((category) => category.typeOfProblems) ?? [];
+
+  const problemData = allProblems.find(
     (p) => p.problem.toLowerCase() === problemName?.toLowerCase()
   );
 
@@ -23,39 +27,38 @@ export default function StepPage() {
 
   return (
     <div className="mt-20 max-w-4xl mx-auto px-6">
-      <div className="flex items-center gap-3 ">
+      <div className="flex items-center gap-3 mb-6">
         <Image
-          src={problemData.image}
-          alt="problem image"
+          src={problemData.image || "/placeholder.png"}
+          alt={problemData.image}
           width={600}
           height={400}
-          className=" w-[70px]"
+          className="w-[70px]"
         />
         <div className="flex flex-col">
-          <h1 className="text-3xl font-bold  ">{problemData.problem}</h1>
-          <p className=" text-gray-700 ">{problemData.problemDescription}</p>
+          <h1 className="text-3xl font-bold">{problemData.problem}</h1>
+          <p className="text-gray-700">{problemData.problemDescription}</p>
         </div>
       </div>
 
-      {steps.map((steps, index) => (
+      {steps.map((step, index) => (
         <div key={index} className="bg-white p-6 rounded shadow-md mb-4">
-          <h2 className="flex gap-2 text-xl font-semibold mb-2 ">
-            Step {steps.stepNumber}<p>{steps.stepTitle}</p> 
-          </h2>
+          <div className="flex gap-1 text-xl font-semibold mb-2 items-center">
+            <h2 className="bg-[black] rounded-md px-3 py-1  text-white">
+              Step {step.stepNumber.trim()}
+            </h2>
+            <p className=" px-2">{step.stepTitle}</p>
+          </div>
           <p className="mb-2">
-            <strong>Why:</strong> {steps.why}
+            <strong>Why:</strong> {step.why}
           </p>
           <ul className="list-disc pl-6 mb-2">
-            
-            {steps.steps.map((step, idx) => (
-              <li key={idx}>{step}</li>
-              
-              
-            ))}
-            
+            {step.steps.map(
+              (s, i) => s && <li key={i}>{s}</li> // skip empty ones
+            )}
           </ul>
           <p>
-            <strong>Takeaway:</strong> {steps.takeaways}
+            <strong>Takeaway:</strong> {step.takeaways}
           </p>
         </div>
       ))}
