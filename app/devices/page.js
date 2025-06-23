@@ -13,7 +13,7 @@ export default function DevicesPage() {
             query: { device: "Desktop" },
           }}
         >
-          <div className="flex flex-col border-2 border-[#171717] w-[300px] h-[250px] items-center justify-center rounded-xl shadow-lg gap- p-4">
+          <div className="flex flex-col border-2 border-[#171717] w-[300px] h-[250px] items-center justify-center rounded-xl shadow-lg gap- p-4 dark:border-white">
             <Image
               src={"/desktop.png"}
               alt="image of desktop"

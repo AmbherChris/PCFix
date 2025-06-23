@@ -1,21 +1,30 @@
 "use client";
+import Link from "next/link";
 
 
 export default function NavBar(){
+
+
+    const links =[
+        {name: "Home", url:"/"},
+        {name: "Devices", url:"/devices"},
+        {name: "Problems", url:"/allProblems"},
+
+
+    ]
     return(
         <>
-        <ul className="flex gap-8 border-[black] dark:border-[white] border-1 rounded-lg p-3 px-4 shadow-lg bg-[white] dark:bg-[black] dark:text-[white] text-[black] inset-shadow-white">
-            <a href="/">
-            <li>Home</li>
-            </a>
-            <a href="/devices">
-            <li>Devices</li></a>
-            <a href="/allProblems">
-            <li>Problems</li></a>
-            <a onClick={() => alert("Not available")}>
-            <li>About</li></a>
-            <a onClick={() => alert("Not available")}>
-            <li>Contacts</li></a>
+        <ul className="navBar">
+
+            {links.map((el) => (
+                <li key={el.name}>
+                    <Link href={el.url}>{el.name} </Link>
+                </li>
+            ))}
+
+
+
+
         </ul>
         
         

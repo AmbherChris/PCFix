@@ -17,13 +17,13 @@ export default function ThemeToggle() {
     <Button
       variant="outline"
       size="icon"
-      className="rounded-lg p-6 ml-2 border-black dark:border-white"
+      className="themeBTN"
       onClick={() => {
         setTheme(theme === "dark" ? "light" : "dark");
       }}
     >
-      <FaSun className="size-6 transition-transform absolute rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
-      <FaMoon className="size-6 transition-transform absolute rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
+      <FaSun className="sun" />
+      <FaMoon className="moon" />
     </Button>
   );
 }

@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased transition-all duration-300`}
       >
         <ThemeWrapper attribute="class" enableSystem defaultTheme="system">
-          <nav className="flex sticky top-10 items-center justify-center">
+          <nav className="navBarContainer">
             <NavBar />
             <ThemeToggle />
           </nav>

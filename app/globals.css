@@ -1,8 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* Custom variant definition (if supported by your CSS processor) */
+@custom-variant dark (&:is(.dark *)); /* Be cautious: not all processors support this */
 
+/* Inline theme variable mapping */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -43,8 +45,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-
-
+/* Root light theme variables */
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -80,6 +81,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* Dark theme overrides */
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -114,11 +116,38 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* Tailwind base layer with component styles */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  .navBar {
+    @apply flex justify-center gap-5 min-w-3xs  py-3 border rounded-sm border-black bg-white text-black shadow-lg inset-shadow-white text-[14px]
+      sm:text-[17px] sm:rounded-lg sm:gap-4 sm:top-5
+      dark:bg-black dark:text-white dark:border-white
+      lg:gap-8 lg:p-3 lg:px-5;
+  }
+
+  .navBarContainer {
+    @apply flex flex-wrap items-center justify-center sticky top-0 gap-1
+      sm:top-5 sm:flex
+      lg:sticky lg:top-10;
+  }
+
+  .themeBTN {
+    @apply items-start left-100 justify-end rounded-lg border-black p-[22.5px] dark:border-white lg:ml-2 lg:p-6;
+  }
+
+  .sun {
+    @apply absolute size-6 rotate-0 scale-100 transition-transform dark:-rotate-90 dark:scale-0 lg:size-8;
+  }
+
+  .moon {
+    @apply absolute size-6 rotate-90 scale-0 transition-transform dark:rotate-0 dark:scale-100 lg:size-8;
   }
 }

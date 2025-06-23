@@ -3,7 +3,7 @@ import StepPage from './StepPage';
 
 export default function Page() {
   return (
-    <Suspense fallback={<p>Loading step...</p>}>
+    <Suspense fallback={<p className='self-center text-30'>Loading step...</p>}>
       <StepPage />
     </Suspense>
   );

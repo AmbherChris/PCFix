@@ -3,7 +3,8 @@ import ProblemsPage from "./ProblemPage";
 
 export default function Page() {
   return (
-    <Suspense fallback={<p>Loading problems...</p>}>
+    <Suspense fallback={<p className="self-center text-30"
+    >Loading problems...</p>}>
       <ProblemsPage />
     </Suspense>
   );
