@@ -4,7 +4,7 @@
 export default function NavBar(){
     return(
         <>
-        <ul className="flex gap-8 border-[#171717] border-1 rounded-lg p-3 px-4 shadow-md bg-[white]">
+        <ul className="flex gap-8 border-[black] dark:border-[white] border-1 rounded-lg p-3 px-4 shadow-lg bg-[white] dark:bg-[black] dark:text-[white] text-[black] inset-shadow-white">
             <a href="/">
             <li>Home</li>
             </a>

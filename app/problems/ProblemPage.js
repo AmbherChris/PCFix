@@ -38,13 +38,13 @@ export default function ProblemsPage() {
                   },
                 }}
               >
-                <div className="flex flex-col w-[300px] h-[250px] items-center justify-center rounded-lg shadow-md border border-[#171717] gap-5 hover:scale-105 transition">
+                <div className="flex flex-col w-[300px] h-[250px] items-center justify-center rounded-lg shadow-md border dark:border-white border-[#171717] gap-5 hover:scale-105 transition pt-5">
                   <Image
                     src={problem.image || "/vercel.svg"}
                     alt={problem.problem}
                     width={300}
                     height={170}
-                    className="object-contain h-[170px]"
+                    className="object-contain h-30 w-auto"
                   />
                   <h3 className="text-center px-4">{problem.problem}</h3>
                 </div>

@@ -16,7 +16,7 @@ export default function Home() {
         </p>
         <Link
           href="/devices"
-          className="flex w-[200px] h-[50px] bg-[#000000] text-[22px] text-[white] items-center justify-center rounded-lg mt-10 "
+          className="flex w-[200px] h-[50px] bg-[#000000] text-[22px] text-[white] items-center justify-center rounded-lg mt-10 dark:bg-white dark:text-black "
         >
           Get Started
         </Link>

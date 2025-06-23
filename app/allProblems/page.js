@@ -14,13 +14,13 @@ export default function ProblemsPage() {
   );
 
   return (
-    <div className="flex flex-col justify-center items-center pt-20">
+    <div className="flex flex-col justify-center items-center pt-20 dark:text-white">
       <h2 className="text-[30px] font-bold">List of Problems</h2>
       <div className="flex flex-wrap gap-10 justify-center items-start mt-[10px] px-[50px] w-full pb-20">
       {allProblems.map((problem, index) => (
         <div
           key={index}
-          className="flex flex-col w-[300px] h-[250px] items-center justify-center rounded-lg shadow-md border border-[#171717] gap-5 bg-white"
+          className="flex flex-col w-[300px] h-[250px] items-center justify-center rounded-lg shadow-md border border-[#171717] dark:border-white gap-5 bg-white dark:bg-black"
         >
           <Image
             src={problem.image || "/fallback.png"} // Optional fallback

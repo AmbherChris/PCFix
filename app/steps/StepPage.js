@@ -37,14 +37,14 @@ export default function StepPage() {
         />
         <div className="flex flex-col">
           <h1 className="text-3xl font-bold">{problemData.problem}</h1>
-          <p className="text-gray-700">{problemData.problemDescription}</p>
+          <p className="text-gray-700 dark:text-white">{problemData.problemDescription}</p>
         </div>
       </div>
 
       {steps.map((step, index) => (
-        <div key={index} className="bg-white p-6 rounded shadow-md mb-4">
+        <div key={index} className="bg-white dark:bg-black p-6 rounded shadow-xs mb-4 shadow-black dark:shadow-white">
           <div className="flex gap-1 text-xl font-semibold mb-2 items-center">
-            <h2 className="bg-[black] rounded-md px-3 py-1  text-white">
+            <h2 className="bg-[black] dark:bg-white dark:text-black rounded-md px-3 py-1  text-white">
               Step {step.stepNumber.trim()}
             </h2>
             <p className=" px-2">{step.stepTitle}</p>

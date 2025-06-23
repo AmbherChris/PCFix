@@ -3136,156 +3136,166 @@ export const database = [
             ],
           },
           {
-  problem: "Update failures",
-  image: "/desktop.png", // Replace with your actual image path
-  problemDescription:
-    "Applications or the operating system may fail to update due to connectivity issues, insufficient permissions, corrupted update files, or system misconfigurations.",
-  stepsInfo: [
-    {
-      stepNumber: "1",
-      stepTitle: "Check Internet Connection",
-      why: "A stable internet connection is required to download update files.",
-      steps: [
-        "Make sure you're connected to a reliable Wi-Fi or Ethernet network.",
-        "Try opening a website to test connectivity.",
-        "Restart your router or modem if needed."
-      ],
-      takeaways: "Update downloads can fail or hang without a stable connection."
-    },
-    {
-      stepNumber: "2",
-      stepTitle: "Restart the Computer",
-      why: "Pending restarts or locked files may interfere with updates.",
-      steps: [
-        "Save all work and reboot your system.",
-        "Attempt the update again after restarting."
-      ],
-      takeaways: "Some update processes require a clean reboot to proceed."
-    },
-    {
-      stepNumber: "3",
-      stepTitle: "Run the App/OS as Administrator",
-      why: "Updates often need elevated permissions to modify system files.",
-      steps: [
-        "Right-click the application or update tool.",
-        "Select 'Run as administrator'.",
-        "Try running the update again."
-      ],
-      takeaways: "Lack of admin rights is a common cause of failed updates."
-    },
-    {
-      stepNumber: "4",
-      stepTitle: "Free Up Disk Space",
-      why: "Low disk space can block updates from downloading or installing.",
-      steps: [
-        "Delete unused files or uninstall unnecessary programs.",
-        "Use Disk Cleanup (Windows) or Storage Management tools (macOS).",
-        "Ensure at least 10–20% free space on the system drive."
-      ],
-      takeaways: "Updates require temporary space to store and unpack files."
-    },
-    {
-      stepNumber: "5",
-      stepTitle: "Clear Update Cache or Temporary Files",
-      why: "Corrupted cache files can prevent proper update installation.",
-      steps: [
-        "For Windows: Stop Windows Update Service (`services.msc`).",
-        "Delete contents of `C:/Windows/SoftwareDistribution/Download`.",
-        "Restart the service and try again.",
-        "For apps, check their cache location and clear temp folders."
-      ],
-      takeaways: "Clearing the cache removes corrupted or incomplete downloads."
-    },
-    {
-      stepNumber: "6",
-      stepTitle: "Check for Error Messages or Logs",
-      why: "Error codes help pinpoint what’s going wrong.",
-      steps: [
-        "Look for update failure messages or codes in the update manager.",
-        "Search the exact code online for tailored troubleshooting.",
-        "Use built-in tools like Windows Update Troubleshooter if available."
-      ],
-      takeaways: "Error codes can guide deeper investigation if the basic steps fail."
-    }
-  ]
-}
-,
+            problem: "Update failures",
+            image: "/desktop.png", // Replace with your actual image path
+            problemDescription:
+              "Applications or the operating system may fail to update due to connectivity issues, insufficient permissions, corrupted update files, or system misconfigurations.",
+            stepsInfo: [
+              {
+                stepNumber: "1",
+                stepTitle: "Check Internet Connection",
+                why: "A stable internet connection is required to download update files.",
+                steps: [
+                  "Make sure you're connected to a reliable Wi-Fi or Ethernet network.",
+                  "Try opening a website to test connectivity.",
+                  "Restart your router or modem if needed.",
+                ],
+                takeaways:
+                  "Update downloads can fail or hang without a stable connection.",
+              },
+              {
+                stepNumber: "2",
+                stepTitle: "Restart the Computer",
+                why: "Pending restarts or locked files may interfere with updates.",
+                steps: [
+                  "Save all work and reboot your system.",
+                  "Attempt the update again after restarting.",
+                ],
+                takeaways:
+                  "Some update processes require a clean reboot to proceed.",
+              },
+              {
+                stepNumber: "3",
+                stepTitle: "Run the App/OS as Administrator",
+                why: "Updates often need elevated permissions to modify system files.",
+                steps: [
+                  "Right-click the application or update tool.",
+                  "Select 'Run as administrator'.",
+                  "Try running the update again.",
+                ],
+                takeaways:
+                  "Lack of admin rights is a common cause of failed updates.",
+              },
+              {
+                stepNumber: "4",
+                stepTitle: "Free Up Disk Space",
+                why: "Low disk space can block updates from downloading or installing.",
+                steps: [
+                  "Delete unused files or uninstall unnecessary programs.",
+                  "Use Disk Cleanup (Windows) or Storage Management tools (macOS).",
+                  "Ensure at least 10–20% free space on the system drive.",
+                ],
+                takeaways:
+                  "Updates require temporary space to store and unpack files.",
+              },
+              {
+                stepNumber: "5",
+                stepTitle: "Clear Update Cache or Temporary Files",
+                why: "Corrupted cache files can prevent proper update installation.",
+                steps: [
+                  "For Windows: Stop Windows Update Service (`services.msc`).",
+                  "Delete contents of `C:/Windows/SoftwareDistribution/Download`.",
+                  "Restart the service and try again.",
+                  "For apps, check their cache location and clear temp folders.",
+                ],
+                takeaways:
+                  "Clearing the cache removes corrupted or incomplete downloads.",
+              },
+              {
+                stepNumber: "6",
+                stepTitle: "Check for Error Messages or Logs",
+                why: "Error codes help pinpoint what’s going wrong.",
+                steps: [
+                  "Look for update failure messages or codes in the update manager.",
+                  "Search the exact code online for tailored troubleshooting.",
+                  "Use built-in tools like Windows Update Troubleshooter if available.",
+                ],
+                takeaways:
+                  "Error codes can guide deeper investigation if the basic steps fail.",
+              },
+            ],
+          },
           {
-  problem: "Incompatibility with OS updates",
-  image: "/desktop.png", // Replace with your actual image path
-  problemDescription:
-    "After an operating system update, some applications or hardware may stop working correctly due to compatibility issues, outdated drivers, or unsupported features.",
-  stepsInfo: [
-    {
-      stepNumber: "1",
-      stepTitle: "Identify Affected Software or Hardware",
-      why: "Pinpointing which apps or devices are affected helps narrow the troubleshooting.",
-      steps: [
-        "Observe which apps crash or refuse to open after the OS update.",
-        "Check device functionality (e.g., printers, webcams, etc.).",
-        "Refer to app documentation for known OS compatibility issues."
-      ],
-      takeaways: "Not all apps or devices are immediately compatible with new OS versions."
-    },
-    {
-      stepNumber: "2",
-      stepTitle: "Check for Software and Driver Updates",
-      why: "App developers often release patches after major OS changes.",
-      steps: [
-        "Open the software’s update checker or visit the official website.",
-        "Download and install the latest version or patch.",
-        "Use Device Manager (on Windows) to update drivers for affected hardware."
-      ],
-      takeaways: "Updating apps and drivers can often resolve incompatibility."
-    },
-    {
-      stepNumber: "3",
-      stepTitle: "Enable Compatibility Mode",
-      why: "Older programs may need to run in compatibility mode to function.",
-      steps: [
-        "Right-click the application’s shortcut or `.exe` file.",
-        "Choose 'Properties' > 'Compatibility' tab.",
-        "Check 'Run this program in compatibility mode' and select a previous OS version.",
-        "Apply and try launching the program again."
-      ],
-      takeaways: "Compatibility mode simulates an older environment for legacy apps."
-    },
-    {
-      stepNumber: "4",
-      stepTitle: "Use a Virtual Machine or Emulator",
-      why: "If no direct support is available, virtualization can help run legacy software.",
-      steps: [
-        "Install a virtual machine tool (e.g. VirtualBox or VMware).",
-        "Install an older, supported OS version inside the VM.",
-        "Run the incompatible software within the virtual environment."
-      ],
-      takeaways: "Virtual machines allow you to keep using critical legacy tools."
-    },
-    {
-      stepNumber: "5",
-      stepTitle: "Contact Software or Hardware Support",
-      why: "Some vendors may offer unofficial patches or workarounds.",
-      steps: [
-        "Visit the official support pages for the product.",
-        "Search their forums or knowledge base for recent update issues.",
-        "Contact customer support for solutions or recommendations."
-      ],
-      takeaways: "Official guidance may save time if others have already reported the issue."
-    },
-    {
-      stepNumber: "6",
-      stepTitle: "Consider Rolling Back the OS Update",
-      why: "If the incompatibility breaks essential workflows, reverting may be necessary.",
-      steps: [
-        "Go to system recovery or update history in OS settings.",
-        "Look for the option to uninstall recent updates or roll back.",
-        "Only proceed if you’ve backed up important data."
-      ],
-      takeaways: "Use rollback as a last resort if compatibility fixes are unavailable."
-    }
-  ]
-}
-,
+            problem: "Incompatibility with OS updates",
+            image: "/desktop.png", // Replace with your actual image path
+            problemDescription:
+              "After an operating system update, some applications or hardware may stop working correctly due to compatibility issues, outdated drivers, or unsupported features.",
+            stepsInfo: [
+              {
+                stepNumber: "1",
+                stepTitle: "Identify Affected Software or Hardware",
+                why: "Pinpointing which apps or devices are affected helps narrow the troubleshooting.",
+                steps: [
+                  "Observe which apps crash or refuse to open after the OS update.",
+                  "Check device functionality (e.g., printers, webcams, etc.).",
+                  "Refer to app documentation for known OS compatibility issues.",
+                ],
+                takeaways:
+                  "Not all apps or devices are immediately compatible with new OS versions.",
+              },
+              {
+                stepNumber: "2",
+                stepTitle: "Check for Software and Driver Updates",
+                why: "App developers often release patches after major OS changes.",
+                steps: [
+                  "Open the software’s update checker or visit the official website.",
+                  "Download and install the latest version or patch.",
+                  "Use Device Manager (on Windows) to update drivers for affected hardware.",
+                ],
+                takeaways:
+                  "Updating apps and drivers can often resolve incompatibility.",
+              },
+              {
+                stepNumber: "3",
+                stepTitle: "Enable Compatibility Mode",
+                why: "Older programs may need to run in compatibility mode to function.",
+                steps: [
+                  "Right-click the application’s shortcut or `.exe` file.",
+                  "Choose 'Properties' > 'Compatibility' tab.",
+                  "Check 'Run this program in compatibility mode' and select a previous OS version.",
+                  "Apply and try launching the program again.",
+                ],
+                takeaways:
+                  "Compatibility mode simulates an older environment for legacy apps.",
+              },
+              {
+                stepNumber: "4",
+                stepTitle: "Use a Virtual Machine or Emulator",
+                why: "If no direct support is available, virtualization can help run legacy software.",
+                steps: [
+                  "Install a virtual machine tool (e.g. VirtualBox or VMware).",
+                  "Install an older, supported OS version inside the VM.",
+                  "Run the incompatible software within the virtual environment.",
+                ],
+                takeaways:
+                  "Virtual machines allow you to keep using critical legacy tools.",
+              },
+              {
+                stepNumber: "5",
+                stepTitle: "Contact Software or Hardware Support",
+                why: "Some vendors may offer unofficial patches or workarounds.",
+                steps: [
+                  "Visit the official support pages for the product.",
+                  "Search their forums or knowledge base for recent update issues.",
+                  "Contact customer support for solutions or recommendations.",
+                ],
+                takeaways:
+                  "Official guidance may save time if others have already reported the issue.",
+              },
+              {
+                stepNumber: "6",
+                stepTitle: "Consider Rolling Back the OS Update",
+                why: "If the incompatibility breaks essential workflows, reverting may be necessary.",
+                steps: [
+                  "Go to system recovery or update history in OS settings.",
+                  "Look for the option to uninstall recent updates or roll back.",
+                  "Only proceed if you’ve backed up important data.",
+                ],
+                takeaways:
+                  "Use rollback as a last resort if compatibility fixes are unavailable.",
+              },
+            ],
+          },
         ],
       },
     ],

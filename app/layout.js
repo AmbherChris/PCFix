@@ -1,6 +1,10 @@
+// app/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/navBar";
+import ThemeToggle from "./components/themeToggle";
+import ThemeWrapper from "./components/ThemeWrapper";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,14 +23,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-all duration-300`}
       >
-        <nav className="flex sticky top-10  items-center justify-center">
-        <NavBar />
-      </nav>
-        {children}
+        <ThemeWrapper attribute="class" enableSystem defaultTheme="system">
+          <nav className="flex sticky top-10 items-center justify-center">
+            <NavBar />
+            <ThemeToggle />
+          </nav>
+          {children}
+        </ThemeWrapper>
       </body>
     </html>
   );
